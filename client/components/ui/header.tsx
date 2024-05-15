@@ -1,5 +1,4 @@
-
-'use client'
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -7,7 +6,7 @@ import Image from "next/image";
 import MobileMenu from "./mobile-menu";
 import logo from "@/public/images/wbl-logo-removebg-preview.svg";
 
-export default function Header(){
+export default function Header() {
   // State to manage dropdown visibility
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
@@ -29,7 +28,11 @@ export default function Header(){
           <div className="shrink-0 mr-4">
             {/* Logo */}
             <Link href="/" className="block" aria-label="Cruip">
-              <Image src={logo} alt="logo" className="w-10 h-10 text-purple-600" />
+              <Image
+                src={logo}
+                alt="logo"
+                className="w-10 h-10 text-purple-600"
+              />
             </Link>
           </div>
 
@@ -38,12 +41,18 @@ export default function Header(){
             {/* Desktop sign in links */}
             <ul className="flex grow justify-end flex-wrap items-center">
               <li>
-                <Link href="/" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out">
+                <Link
+                  href="/"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out"
+                >
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/schedule" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out">
+                <Link
+                  href="/schedule"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out"
+                >
                   Schedule
                 </Link>
               </li>
@@ -57,25 +66,34 @@ export default function Header(){
                 </button>
                 {dropdownOpen && (
                   <ul className="text-purple-600 absolute z-10 left-0 mt-2 w-48 bg-gray-800 rounded-md shadow-lg">
-                  {/* <ul className="  absolute z-10 left-0 mt-2 w-48 bg-white rounded-md shadow-lg"> */}
+                    {/* <ul className="  absolute z-10 left-0 mt-2 w-48 bg-white rounded-md shadow-lg"> */}
                     <li>
                       <Link legacyBehavior href="/recording">
-                        <a onClick={handleDropdownItemClick} className="block rounded-md px-4 py-2  hover:bg-gray-600 transition duration-150 ease-in-out">
+                        <a
+                          onClick={handleDropdownItemClick}
+                          className="block rounded-md px-4 py-2  hover:bg-gray-600 transition duration-150 ease-in-out"
+                        >
                           Recordings
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link legacyBehavior href="/presentation">
-                        <a onClick={handleDropdownItemClick} className="block rounded-md px-4 py-2  hover:bg-gray-600 transition duration-150 ease-in-out">
+                        <a
+                          onClick={handleDropdownItemClick}
+                          className="block rounded-md px-4 py-2  hover:bg-gray-600 transition duration-150 ease-in-out"
+                        >
                           Presentation
                         </a>
                       </Link>
                     </li>
                     <li>
                       <Link legacyBehavior href="/assignment">
-                        <a onClick={handleDropdownItemClick} className="block rounded-md px-4 py-2   hover:bg-gray-600 transition duration-150 ease-in-out">
-                         Assignments
+                        <a
+                          onClick={handleDropdownItemClick}
+                          className="block rounded-md px-4 py-2   hover:bg-gray-600 transition duration-150 ease-in-out"
+                        >
+                          Assignments
                         </a>
                       </Link>
                     </li>
@@ -90,17 +108,26 @@ export default function Header(){
                 )}
               </li>
               <li>
-                <Link href="#contactus" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out">
+                <Link
+                  href="/contact"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 transition duration-150 ease-in-out"
+                >
                   Contact Us
                 </Link>
               </li>
               <li>
-                <Link href="/signin" className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                <Link
+                  href="/signin"
+                  className="font-medium text-purple-600 hover:text-gray-200 px-4 py-3 flex items-center transition duration-150 ease-in-out"
+                >
                   Sign in
                 </Link>
               </li>
               <li>
-                <Link href="/signup" className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3">
+                <Link
+                  href="/signup"
+                  className="btn-sm text-white bg-purple-600 hover:bg-purple-700 ml-3"
+                >
                   Register
                 </Link>
               </li>
