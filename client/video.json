@@ -1,4 +1,4 @@
- export  const videoData=[
+[
     {
         "id": "1",
         "title": "Big Buck Bunny",
