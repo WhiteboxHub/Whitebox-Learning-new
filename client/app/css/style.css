@@ -20,3 +20,10 @@
 [x-cloak=""] {
     display: none;
 }
+
+
+/* Apply custom selection styles */
+::selection {
+    background-color: theme('colors.selection.background');
+    color: theme('colors.selection.text');
+  }

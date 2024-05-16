@@ -6,20 +6,21 @@ import Layout from "../../../components/Layout";
 // Components for different sections
 import Presentation from "./Presentation";
 import Cheatsheets from "./Cheatsheets";
-import Code from "./Code";
-import Diagrams from "./Diagrams";
-// import Installation from "./Installation";
+// import Code from "./Code";
+// import Diagrams from "./Diagrams";
+import Installations from "./Installations";
 import Miscellaneous from "./Miscellaneous";
 import Software from "./Software";
-
+import Books  from "./Books";
 type ComponentType =
   | "presentation"
   | "cheatsheets"
-  | "code"
-  | "diagrams"
+  // | "code"
+  // | "diagrams"
   | "installation"
   | "miscellaneous"
-  | "software"; // Define a union type for valid component types
+    "books"
+    "software"; // Define a union type for valid component types
 
 export default function Recordings() {
   // State to manage active component
@@ -38,12 +39,16 @@ export default function Recordings() {
         return <Presentation />;
       case "cheatsheets":
         return <Cheatsheets />;
+      case "books":
+          return <Books />;
       case "software":
         return <Software />;
-      case "code":
-        return <Code />;
-      case "diagrams":
-        return <Diagrams />;
+      // case "code":
+      //   return <Code />;
+      // case "diagrams":
+      //   return <Diagrams />;
+      case "installation":
+        return <Installations/>;
       case "miscellaneous":
         return <Miscellaneous />;
       default:
@@ -66,9 +71,10 @@ export default function Recordings() {
         </nav>
 
         {/* Section with buttons and dropdowns */}
-        <section className="flex items-center justify-between mb-8">
+        {/* <section className="flex border border-red-300 items-center justify-between mb-8"> */}
+        <section className="flex   justify-between mb-8">
           {/* Left side */}
-          <div>
+          <div className="flex  mt-10 h-1/2">
             <div className="flex flex-col ">
               <button
                 className={`bg-blue-500 hover:bg-blue-600 w-36 text-white px-4 py-2 rounded-md mb-1 ${
@@ -110,22 +116,30 @@ export default function Recordings() {
               >
                 Diagrams
               </button> */}
-              {/* <button
+              <button
                 className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mb-1 ${
                   activeComponent === "installation" ? "bg-blue-600" : ""
                 }`}
                 onClick={() => handleButtonClick("installation")}
               >
                 Installation
-              </button> */}
-              {/* <button
+              </button>
+              <button
+                className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mb-1 ${
+                  activeComponent === "installation" ? "bg-blue-600" : ""
+                }`}
+                onClick={() => handleButtonClick("books")}
+              >
+                Books
+              </button>
+              <button
                 className={`bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-md mb-1 ${
                   activeComponent === "miscellaneous" ? "bg-blue-600" : ""
                 }`}
                 onClick={() => handleButtonClick("miscellaneous")}
               >
                 Miscellaneous
-              </button> */}
+              </button>
             </div>
           </div>
 

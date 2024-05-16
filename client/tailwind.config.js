@@ -8,6 +8,12 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+
+        selection: {
+          background: '#9737bf', // Green background for selection
+          text: 'white', // Red text color for selection
+        },
+        
         gray: {
           100: '#EBF1F5',
           200: '#D9E3EA',

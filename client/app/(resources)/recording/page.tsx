@@ -40,7 +40,7 @@ export default function Recordings() {
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {/* Navbar */}
-        <nav className="  flex items-center justify-between mt-32 mb-16">
+        <nav className="  flex items-center justify-between mt-24">
           <h1 className="text-4xl font-bold">
             Recordings
             <span className="text-2xl font-light">(Classes)</span>
@@ -53,9 +53,9 @@ export default function Recordings() {
         </nav>
 
         {/* Section with buttons and dropdowns */}
-        <section className="flex items-center justify-between mb-8">
+        <section className="flex  justify-between mb-8">
           {/* Left side */}
-          <div>
+          <div className="flex  mt-10 h-1/2">
             <div className="flex flex-col ">
               <button
                 className="bg-blue-500 hover:bg-blue-600 text-white w-36 px-4 py-2 rounded-md mb-1"
@@ -79,7 +79,7 @@ export default function Recordings() {
           </div>
 
           {/* Right side */}
-          <div className="flex-grow space-y-4 ml-4">{renderComponent()}</div>
+          <div className="flex-grow  mt-10 space-y-4 ml-20 ">{renderComponent()}</div>
         </section>
       </main>
     </div>

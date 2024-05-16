@@ -1,12 +1,15 @@
 import React from "react";
+// import ResourcesTable from "@/components/resourcesTable";
 
-const Software = () => {
+const Miscellaneous = () => {
   return (
     <div>
-      <h2>Software Component</h2>
-      {/* Add your code component content here */}
+      <div className="max-w-6xl  mx-auto px-4 sm:px-6 py-12">
+        <h1 className="text-3xl font-bold mb-4">Miscellaneous </h1>
+        {/* <ResourcesTable subjects={subjects} /> */}
+      </div>
     </div>
   );
 };
 
-export default Software;
+export default Miscellaneous;
