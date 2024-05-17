@@ -11,17 +11,14 @@ import Cheatsheets from "./Cheatsheets";
 import Installations from "./Installations";
 import Miscellaneous from "./Miscellaneous";
 import Software from "./Software";
-import Books  from "./Books";
+import Books from "./Books";
 type ComponentType =
   | "presentation"
   | "cheatsheets"
-  // | "code"
-  // | "diagrams"
   | "installation"
   | "miscellaneous"
-    "books"
-    "software"; // Define a union type for valid component types
-
+  |  "books"
+  | "software"; 
 export default function Recordings() {
   // State to manage active component
   const [activeComponent, setActiveComponent] =
@@ -36,11 +33,11 @@ export default function Recordings() {
   const renderComponent = () => {
     switch (activeComponent) {
       case "presentation":
-        return <Presentation />;
+        return <Presentation />;          
       case "cheatsheets":
         return <Cheatsheets />;
       case "books":
-          return <Books />;
+        return <Books />;
       case "software":
         return <Software />;
       // case "code":
@@ -48,7 +45,7 @@ export default function Recordings() {
       // case "diagrams":
       //   return <Diagrams />;
       case "installation":
-        return <Installations/>;
+        return <Installations />;
       case "miscellaneous":
         return <Miscellaneous />;
       default:

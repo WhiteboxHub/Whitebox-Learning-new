@@ -40,7 +40,7 @@ export default function Recordings() {
       {/* Main content */}
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
         {/* Navbar */}
-        <nav className="  flex items-center justify-between mt-24">
+        <nav className="flex items-center justify-between mt-24">
           <h1 className="text-4xl font-bold">
             Recordings
             <span className="text-2xl font-light">(Classes)</span>
